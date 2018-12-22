@@ -1,0 +1,26 @@
+<table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Telephone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Event</th>
+            <th scope="col">Date & Time</th>
+            <th scope="col">Order Details</th>
+            <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for inquiry in inquiries%}
+            <tr>
+            <td>{{inquiry.first_name}} {{inquiry.last_name}}</td>
+            <td>{{inquiry.telephone}}</td>
+            <td>{{inquiry.email}}</td>
+            <td>{{inquiry.event}}</td>
+            <td>{{inquiry.event_date}}</td>
+            <td>{{inquiry.order_desc}}</td>
+            <td><a href="/delete/{{inquiry.id}}">Delete</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>

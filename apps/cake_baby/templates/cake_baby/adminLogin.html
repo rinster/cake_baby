@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootstrap TEMPLATE IN HEADING-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Bootstrap TEMPLATE IN Heading-->
+
+    <style>
+    body {
+        background:url("/static/cake_baby/img/desk.jpeg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    /* .main_container {
+        vertical-align: center;
+    } */
+    .container2 {
+        border: 2px solid black;
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.7;
+        margin: 0 auto;
+        width: 300px;
+        margin-top: 100px;
+
+    }
+    input, span {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    </style>
+
+    <title>Login</title>
+</head>
+
+<body>
+<div class="main_container">
+    
+    <div class="container2">
+        <h3 style="color:black; text-align: center;">Administration Login</h3>
+        <form action="/loginProcess" method="POST">
+            {% csrf_token %}
+            
+            <br>
+            <input type="text" name="email_login"  placeholder="Username" style="padding: 4px">
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == 'email_login' %}
+                        <span class="text-danger">{{ message }}</span>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <br>
+            <input type="password" name="password_login" placeholder="Password" style="padding: 4px">
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.extra_tags == 'password_login' %}
+                        <span class="text-danger">{{ message }}</span>
+                    {% endif %}
+                {% endfor %}
+            {% endif %} 
+            <br>
+            <input class="btn btn-primary" type="submit" value="Login" style="color:black; margin-left: 100px;">
+        </form>
+        <br>
+        <a href="/portfolio" style="color:black">Go Back</a>
+    </div>
+    
+</div>     
+</body>
+</html>
