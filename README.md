@@ -1,7 +1,7 @@
 # Cake Baby
 
 ### Summary
-Designed a portfolio with a functional web application, complete with a self-sustaining administrative backend for a client. Client is able to do real-time search, manage and process cake orders, upload/display and update portfolio pictures as well as receive text message notifications of cake order via Twilio API. (Planned migration to React - Coming soon!)
+Designed a fully functional web application with an administrative backend for a client. Client is able to do real-time search, manage and process cake orders, upload/display and update portfolio pictures as well as receive text message notifications of cake order via Twilio API. (Planned migration to React - Coming soon!)
 
 Technologies: Python, Django, HTML5/CSS3, CSS Grids/Animations, Twilio text messaging API.
 
