@@ -8,7 +8,7 @@ chardet==3.0.4
 decorator==4.3.0
 Django==1.10
 django-bootstrap3==10.0.1
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-phonenumber-field==2.0.1
 django-tables2==1.21.2
 django-twilio==0.9.3
